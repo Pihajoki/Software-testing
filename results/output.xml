@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.7 on win32)" generated="2026-09-01T20:09:04.731911" rpa="false" schemaversion="5">
+<suite id="s1" name="Software testing" source="c:\Users\jogis\Documents\GitHub\Software testing">
+<suite id="s1-s1" name="Robot Framework" source="c:\Users\jogis\Documents\GitHub\Software testing\Robot Framework">
+<suite id="s1-s1-s1" name="Demo" source="c:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\demo.robot">
+<test id="s1-s1-s1-t1" name="Check outcome" line="13">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-09-01T20:09:04.778951" level="INFO">${three} = Donald Duck</msg>
+<var>${three}</var>
+<arg>Donald Duck</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.778605" elapsed="0.000446"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${three}</arg>
+<arg>${one} ${two}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.779308" elapsed="0.000316"/>
+</kw>
+<status status="PASS" start="2026-09-01T20:09:04.776033" elapsed="0.003816"/>
+</test>
+<test id="s1-s1-s1-t2" name="Check value from list" line="17">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-09-01T20:09:04.785993" level="INFO">${number} = 3</msg>
+<var>${number}</var>
+<arg>${list}[2]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.785724" elapsed="0.000418"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${number}</arg>
+<arg>3</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.786290" elapsed="0.000220"/>
+</kw>
+<status status="PASS" start="2026-09-01T20:09:04.783650" elapsed="0.003030"/>
+</test>
+<test id="s1-s1-s1-t3" name="Add value to list" line="21">
+<kw name="Copy List" owner="Collections">
+<msg time="2026-09-01T20:09:04.790352" level="INFO">@{list} = [ 1 | 2 | 3 | 4 ]</msg>
+<var>@{list}</var>
+<arg>${list}</arg>
+<doc>Returns a copy of the given list.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.790184" elapsed="0.000245"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-09-01T20:09:04.790816" level="INFO">${addition} = 333</msg>
+<var>${addition}</var>
+<arg>333</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.790612" elapsed="0.000322"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${list}</arg>
+<arg>${addition}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.791095" elapsed="0.000197"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${list}[4]</arg>
+<arg>${addition}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.791413" elapsed="0.000234"/>
+</kw>
+<status status="PASS" start="2026-09-01T20:09:04.788500" elapsed="0.003286"/>
+</test>
+<test id="s1-s1-s1-t4" name="List Length" line="27">
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2026-09-01T20:09:04.798033" level="INFO">Length is 4.</msg>
+<msg time="2026-09-01T20:09:04.798226" level="INFO">${length} = 4</msg>
+<var>${length}</var>
+<arg>${list}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.797691" elapsed="0.000606"/>
+</kw>
+<kw name="Convert To Integer" owner="BuiltIn">
+<msg time="2026-09-01T20:09:04.798650" level="INFO">${expected} = 4</msg>
+<var>${expected}</var>
+<arg>4</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.798457" elapsed="0.000246"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${length}</arg>
+<arg>${expected}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.798871" elapsed="0.000212"/>
+</kw>
+<status status="PASS" start="2026-09-01T20:09:04.795341" elapsed="0.003897"/>
+</test>
+<test id="s1-s1-s1-t5" name="Put list in alphabetical order" line="32">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-01T20:09:04.803130" level="INFO">['Juho', 'Roni', 'Henkka', 'Antti']</msg>
+<arg>${names}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.802955" elapsed="0.000256"/>
+</kw>
+<kw name="Sort List" owner="Collections">
+<arg>${names}</arg>
+<doc>Sorts the given list in place.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.803382" elapsed="0.000188"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-01T20:09:04.803897" level="INFO">['Antti', 'Henkka', 'Juho', 'Roni']</msg>
+<arg>${names}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.803724" elapsed="0.000251"/>
+</kw>
+<status status="PASS" start="2026-09-01T20:09:04.801275" elapsed="0.002864"/>
+</test>
+<test id="s1-s1-s1-t6" name="Loop through the list" line="37">
+<for flavor="IN RANGE">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-01T20:09:04.808046" level="INFO">1</msg>
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.807896" elapsed="0.000232"/>
+</kw>
+<var name="${counter}">1</var>
+<status status="PASS" start="2026-09-01T20:09:04.807815" elapsed="0.000352"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-01T20:09:04.808477" level="INFO">2</msg>
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.808323" elapsed="0.000220"/>
+</kw>
+<var name="${counter}">2</var>
+<status status="PASS" start="2026-09-01T20:09:04.808228" elapsed="0.000349"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-01T20:09:04.809154" level="INFO">3</msg>
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.808803" elapsed="0.000501"/>
+</kw>
+<var name="${counter}">3</var>
+<status status="PASS" start="2026-09-01T20:09:04.808625" elapsed="0.000754"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-01T20:09:04.809831" level="INFO">4</msg>
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.809610" elapsed="0.000428"/>
+</kw>
+<var name="${counter}">4</var>
+<status status="PASS" start="2026-09-01T20:09:04.809479" elapsed="0.000680"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-01T20:09:04.810700" level="INFO">5</msg>
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.810497" elapsed="0.000336"/>
+</kw>
+<var name="${counter}">5</var>
+<status status="PASS" start="2026-09-01T20:09:04.810299" elapsed="0.000578"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-01T20:09:04.811143" level="INFO">6</msg>
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.811015" elapsed="0.000231"/>
+</kw>
+<var name="${counter}">6</var>
+<status status="PASS" start="2026-09-01T20:09:04.810936" elapsed="0.000358"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-01T20:09:04.811591" level="INFO">7</msg>
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.811430" elapsed="0.000304"/>
+</kw>
+<var name="${counter}">7</var>
+<status status="PASS" start="2026-09-01T20:09:04.811350" elapsed="0.000436"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-01T20:09:04.812116" level="INFO">8</msg>
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.811924" elapsed="0.000328"/>
+</kw>
+<var name="${counter}">8</var>
+<status status="PASS" start="2026-09-01T20:09:04.811845" elapsed="0.000463"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-01T20:09:04.812566" level="INFO">9</msg>
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.812433" elapsed="0.000233"/>
+</kw>
+<var name="${counter}">9</var>
+<status status="PASS" start="2026-09-01T20:09:04.812362" elapsed="0.000353"/>
+</iter>
+<var>${counter}</var>
+<value>1</value>
+<value>10</value>
+<status status="PASS" start="2026-09-01T20:09:04.807611" elapsed="0.005131"/>
+</for>
+<status status="PASS" start="2026-09-01T20:09:04.805730" elapsed="0.007165"/>
+</test>
+<test id="s1-s1-s1-t7" name="Loop names list" line="42">
+<for flavor="IN">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-01T20:09:04.823677" level="INFO">Antti</msg>
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.823466" elapsed="0.000321"/>
+</kw>
+<var name="${element}">Antti</var>
+<status status="PASS" start="2026-09-01T20:09:04.823372" elapsed="0.000466"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-01T20:09:04.824262" level="INFO">Henkka</msg>
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.824044" elapsed="0.000297"/>
+</kw>
+<var name="${element}">Henkka</var>
+<status status="PASS" start="2026-09-01T20:09:04.823892" elapsed="0.000491"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-01T20:09:04.824621" level="INFO">Juho</msg>
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.824498" elapsed="0.000223"/>
+</kw>
+<var name="${element}">Juho</var>
+<status status="PASS" start="2026-09-01T20:09:04.824433" elapsed="0.000324"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-01T20:09:04.825150" level="INFO">Roni</msg>
+<arg>${element}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.824907" elapsed="0.000351"/>
+</kw>
+<var name="${element}">Roni</var>
+<status status="PASS" start="2026-09-01T20:09:04.824800" elapsed="0.000499"/>
+</iter>
+<var>${element}</var>
+<value>@{names}</value>
+<status status="PASS" start="2026-09-01T20:09:04.823192" elapsed="0.002133"/>
+</for>
+<status status="PASS" start="2026-09-01T20:09:04.819317" elapsed="0.006158"/>
+</test>
+<test id="s1-s1-s1-t8" name="Make new directory" line="47">
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-09-01T20:09:04.835217" level="INFO" html="true">Created directory '&lt;a href="file://C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test"&gt;C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test&lt;/a&gt;'.</msg>
+<arg>C:\\Users\\jogis\\Documents\\GitHub\\Software testing\\Robot Framework\\Test</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.834727" elapsed="0.000629"/>
+</kw>
+<kw name="Directory Should Exist" owner="OperatingSystem">
+<msg time="2026-09-01T20:09:04.835704" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test"&gt;C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test&lt;/a&gt;' exists.</msg>
+<arg>C:\\Users\\jogis\\Documents\\GitHub\\Software testing\\Robot Framework\\Test</arg>
+<doc>Fails unless the given path points to an existing directory.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.835538" elapsed="0.000238"/>
+</kw>
+<status status="PASS" start="2026-09-01T20:09:04.832369" elapsed="0.003580"/>
+</test>
+<test id="s1-s1-s1-t9" name="Create a new file" line="51">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-09-01T20:09:04.839917" level="INFO">${path} = C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test</msg>
+<var>${path}</var>
+<arg>C:\\Users\\jogis\\Documents\\GitHub\\Software testing\\Robot Framework\\Test</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.839701" elapsed="0.000288"/>
+</kw>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2026-09-01T20:09:04.840806" level="INFO" html="true">Created file '&lt;a href="file://C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test\example.txt"&gt;C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test\example.txt&lt;/a&gt;'.</msg>
+<arg>${path}/example.txt</arg>
+<arg>This is test!</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.840155" elapsed="0.000781"/>
+</kw>
+<kw name="File Should Exist" owner="OperatingSystem">
+<msg time="2026-09-01T20:09:04.841332" level="INFO" html="true">File '&lt;a href="file://C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test\example.txt"&gt;C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test\example.txt&lt;/a&gt;' exists.</msg>
+<arg>${path}/example.txt</arg>
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.841141" elapsed="0.000327"/>
+</kw>
+<kw name="File Should Not Be Empty" owner="OperatingSystem">
+<msg time="2026-09-01T20:09:04.841777" level="INFO" html="true">File '&lt;a href="file://C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test\example.txt"&gt;C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test\example.txt&lt;/a&gt;' contains 13 bytes.</msg>
+<arg>${path}/example.txt</arg>
+<doc>Fails if the specified file is empty.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.841624" elapsed="0.000237"/>
+</kw>
+<status status="PASS" start="2026-09-01T20:09:04.837904" elapsed="0.004124"/>
+</test>
+<test id="s1-s1-s1-t10" name="Append text to file" line="58">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-09-01T20:09:04.846190" level="INFO">${path} = C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test</msg>
+<var>${path}</var>
+<arg>C:\\Users\\jogis\\Documents\\GitHub\\Software testing\\Robot Framework\\Test</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.845966" elapsed="0.000361"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-09-01T20:09:04.846976" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test\example.txt"&gt;C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test\example.txt&lt;/a&gt;'.</msg>
+<arg>${path}/example.txt</arg>
+<arg>\nor is this a test?</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.846497" elapsed="0.000571"/>
+</kw>
+<status status="PASS" start="2026-09-01T20:09:04.843989" elapsed="0.003265"/>
+</test>
+<test id="s1-s1-s1-t11" name="Clean files and folders" line="62">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-09-01T20:09:04.851847" level="INFO">${path} = C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test</msg>
+<var>${path}</var>
+<arg>C:\\Users\\jogis\\Documents\\GitHub\\Software testing\\Robot Framework\\Test</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.851577" elapsed="0.000341"/>
+</kw>
+<kw name="Remove File" owner="OperatingSystem">
+<msg time="2026-09-01T20:09:04.852488" level="INFO" html="true">Removed file '&lt;a href="file://C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test\example.txt"&gt;C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test\example.txt&lt;/a&gt;'.</msg>
+<arg>${path}/example.txt</arg>
+<doc>Removes a file with the given path.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.852093" elapsed="0.000557"/>
+</kw>
+<kw name="Directory Should Be Empty" owner="OperatingSystem">
+<msg time="2026-09-01T20:09:04.852943" level="INFO" html="true">Listing contents of directory '&lt;a href="file://C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test"&gt;C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test&lt;/a&gt;'.</msg>
+<msg time="2026-09-01T20:09:04.853203" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test"&gt;C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test&lt;/a&gt;' is empty.</msg>
+<arg>${path}</arg>
+<doc>Fails unless the specified directory is empty.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.852801" elapsed="0.000602"/>
+</kw>
+<kw name="Remove Directory" owner="OperatingSystem">
+<msg time="2026-09-01T20:09:04.853709" level="INFO" html="true">Listing contents of directory '&lt;a href="file://C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test"&gt;C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test&lt;/a&gt;'.</msg>
+<msg time="2026-09-01T20:09:04.853915" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test"&gt;C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test&lt;/a&gt;' is empty.</msg>
+<msg time="2026-09-01T20:09:04.854172" level="INFO" html="true">Removed directory '&lt;a href="file://C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test"&gt;C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test&lt;/a&gt;'.</msg>
+<arg>${path}</arg>
+<doc>Removes the directory pointed to by the given ``path``.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.853555" elapsed="0.000708"/>
+</kw>
+<kw name="Directory Should Not Exist" owner="OperatingSystem">
+<msg time="2026-09-01T20:09:04.854637" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test"&gt;C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\Test&lt;/a&gt;' does not exist.</msg>
+<arg>${path}</arg>
+<doc>Fails if the given path points to an existing file.</doc>
+<status status="PASS" start="2026-09-01T20:09:04.854422" elapsed="0.000313"/>
+</kw>
+<status status="PASS" start="2026-09-01T20:09:04.849076" elapsed="0.005834"/>
+</test>
+<test id="s1-s1-s1-t12" name="Ping Web Page" line="69">
+<kw name="Run And Return Rc And Output" owner="OperatingSystem">
+<msg time="2026-09-01T20:09:04.867553" level="INFO">Running command 'ping www.google.com 2&gt;&amp;1'.</msg>
+<msg time="2026-09-01T20:09:07.955203" level="INFO">${output} = (0, '\nPinging www.google.com [142.251.156.119] with 32 bytes of data:\nReply from 142.251.156.119: bytes=32 time=18ms TTL=118\nReply from 142.251.156.119: bytes=32 time=16ms TTL=118\nReply from 142.2...</msg>
+<var>${output}</var>
+<arg>ping www.google.com</arg>
+<doc>_This keyword is considered deprecated. Use the
+[http://robotframework.org/robotframework/latest/libraries/Process.html|
+Process] library instead._</doc>
+<status status="PASS" start="2026-09-01T20:09:04.859429" elapsed="3.096065"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-01T20:09:07.956016" level="INFO">(0, '\nPinging www.google.com [142.251.156.119] with 32 bytes of data:\nReply from 142.251.156.119: bytes=32 time=18ms TTL=118\nReply from 142.251.156.119: bytes=32 time=16ms TTL=118\nReply from 142.251.156.119: bytes=32 time=18ms TTL=118\nReply from 142.251.156.119: bytes=32 time=16ms TTL=118\n\nPing statistics for 142.251.156.119:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 16ms, Maximum = 18ms, Average = 17ms')</msg>
+<arg>${output}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-01T20:09:07.955730" elapsed="0.000445"/>
+</kw>
+<status status="PASS" start="2026-09-01T20:09:04.856862" elapsed="3.099448"/>
+</test>
+<test id="s1-s1-s1-t13" name="read texts and find word students" line="74">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-09-01T20:09:07.960825" level="INFO">${path} = C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\</msg>
+<var>${path}</var>
+<arg>C:\\Users\\jogis\\Documents\\GitHub\\Software testing\\Robot Framework\\</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-09-01T20:09:07.960587" elapsed="0.000359"/>
+</kw>
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2026-09-01T20:09:07.961197" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\example_text.txt"&gt;C:\Users\jogis\Documents\GitHub\Software testing\Robot Framework\example_text.txt&lt;/a&gt;'.</msg>
+<msg time="2026-09-01T20:09:07.961554" level="INFO">${output} = The aim of international services at Hame University of Applied Sciences is to support the development of the international competence of our staff and students. International services, i.e. HAMK Inte...</msg>
+<var>${output}</var>
+<arg>${path}/example_text.txt</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2026-09-01T20:09:07.961072" elapsed="0.000566"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-01T20:09:07.962074" level="INFO">The aim of international services at Hame University of Applied Sciences is to support the development of the international competence of our staff and students. International services, i.e. HAMK International provides services to promote international student, trainee and staff mobility and also gives information about the many different ways to become international at HAMK. When you want to go abroad for studies or work placement or you are wondering about which alternative is the best for you, the staff of HAMK International will help you to find the best solution.
+
+Each degree programme has an international contact person who is responsible for the coordination of incoming students.</msg>
+<arg>${output}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-01T20:09:07.961834" elapsed="0.000399"/>
+</kw>
+<kw name="Remove String" owner="String">
+<msg time="2026-09-01T20:09:07.962614" level="INFO">${output} = The aim of international services at Hame University of Applied Sciences is to support the development of the international competence of our staff and students International services ie HAMK Internat...</msg>
+<var>${output}</var>
+<arg>${output}</arg>
+<arg>.</arg>
+<arg>,</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<status status="PASS" start="2026-09-01T20:09:07.962420" elapsed="0.000340"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-01T20:09:07.963139" level="INFO">The aim of international services at Hame University of Applied Sciences is to support the development of the international competence of our staff and students International services ie HAMK International provides services to promote international student trainee and staff mobility and also gives information about the many different ways to become international at HAMK When you want to go abroad for studies or work placement or you are wondering about which alternative is the best for you the staff of HAMK International will help you to find the best solution
+
+Each degree programme has an international contact person who is responsible for the coordination of incoming students</msg>
+<arg>${output}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-01T20:09:07.962936" elapsed="0.000371"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2026-09-01T20:09:07.963641" level="INFO">@{wordList} = [ The | aim | of | international | services | at | Hame | University | of | Applied | Sciences | is | to | support | the | development | of | the | international | competence | of | our | staff | and ...</msg>
+<var>@{wordList}</var>
+<arg>${output}</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2026-09-01T20:09:07.963450" elapsed="0.000318"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-01T20:09:07.964125" level="INFO">['The', 'aim', 'of', 'international', 'services', 'at', 'Hame', 'University', 'of', 'Applied', 'Sciences', 'is', 'to', 'support', 'the', 'development', 'of', 'the', 'international', 'competence', 'of', 'our', 'staff', 'and', 'students', 'International', 'services', 'ie', 'HAMK', 'International', 'provides', 'services', 'to', 'promote', 'international', 'student', 'trainee', 'and', 'staff', 'mobility', 'and', 'also', 'gives', 'information', 'about', 'the', 'many', 'different', 'ways', 'to', 'become', 'international', 'at', 'HAMK', 'When', 'you', 'want', 'to', 'go', 'abroad', 'for', 'studies', 'or', 'work', 'placement', 'or', 'you', 'are', 'wondering', 'about', 'which', 'alternative', 'is', 'the', 'best', 'for', 'you', 'the', 'staff', 'of', 'HAMK', 'International', 'will', 'help', 'you', 'to', 'find', 'the', 'best', 'solution', 'Each', 'degree', 'programme', 'has', 'an', 'international', 'contact', 'person', 'who', 'is', 'responsible', 'for', 'the', 'coordination', 'of', 'incoming', 'students']</msg>
+<arg>${wordList}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-01T20:09:07.963915" elapsed="0.000341"/>
+</kw>
+<kw name="Get Index From List" owner="Collections">
+<msg time="2026-09-01T20:09:07.964641" level="INFO">${index} = 24</msg>
+<var>${index}</var>
+<arg>${wordList}</arg>
+<arg>students</arg>
+<doc>Returns the index of the first occurrence of the ``value`` on the list.</doc>
+<status status="PASS" start="2026-09-01T20:09:07.964451" elapsed="0.000305"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${index}</arg>
+<arg>${24}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-09-01T20:09:07.964871" elapsed="0.000229"/>
+</kw>
+<status status="PASS" start="2026-09-01T20:09:07.958826" elapsed="0.006488"/>
+</test>
+<test id="s1-s1-s1-t14" name="get ip address" line="86">
+<kw name="Run And Return Rc And Output" owner="OperatingSystem">
+<msg time="2026-09-01T20:09:07.980961" level="INFO">Running command 'ipconfig 2&gt;&amp;1'.</msg>
+<msg time="2026-09-01T20:09:08.010244" level="INFO">${output} = (0, '\nWindows IP Configuration\n\n\nUnknown adapter ProtonVPN:\n\n   Connection-specific DNS Suffix  . : \n   IPv4 Address. . . . . . . . . . . : 10.2.0.2\n   Subnet Mask . . . . . . . . . . . : 255....</msg>
+<var>${output}</var>
+<arg>ipconfig</arg>
+<doc>_This keyword is considered deprecated. Use the
+[http://robotframework.org/robotframework/latest/libraries/Process.html|
+Process] library instead._</doc>
+<status status="PASS" start="2026-09-01T20:09:07.971859" elapsed="0.038666"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2026-09-01T20:09:08.011119" level="INFO">@{wordList} = [ Windows | IP | Configuration | Unknown | adapter | ProtonVPN: | Connection-specific | DNS | Suffix | . | : | IPv4 | Address. | . | . | . | . | . | . | . | . | . | . | : | 10.2.0.2 | Subnet | Mask | ...</msg>
+<var>@{wordList}</var>
+<arg>${output}[1]</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2026-09-01T20:09:08.010783" elapsed="0.000513"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-01T20:09:08.011760" level="INFO">['Windows', 'IP', 'Configuration', 'Unknown', 'adapter', 'ProtonVPN:', 'Connection-specific', 'DNS', 'Suffix', '.', ':', 'IPv4', 'Address.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', ':', '10.2.0.2', 'Subnet', 'Mask', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', ':', '255.255.255.255', 'Default', 'Gateway', '.', '.', '.', '.', '.', '.', '.', '.', '.', ':', '0.0.0.0', 'Ethernet', 'adapter', 'Ethernet', '2:', 'Media', 'State', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', ':', 'Media', 'disconnected', 'Connection-specific', 'DNS', 'Suffix', '.', ':', 'home', 'Ethernet', 'adapter', 'Ethernet:', 'Connection-specific', 'DNS', 'Suffix', '.', ':', 'home', 'IPv4', 'Address.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', ':', '192.168.1.200', 'Subnet', 'Mask', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', ':', '255.255.255.0', 'Default', 'Gateway', '.', '.', '.', '.', '.', '.', '.', '.', '.', ':', '192.168.1.1', 'Wireless', 'LAN', 'adapter', 'WiFi:', 'Media', 'State', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', ':', 'Media', 'disconnected', 'Connection-specific', 'DNS', 'Suffix', '.', ':', 'Wireless', 'LAN', 'adapter', 'Local', 'Area', 'Connection*', '9:', 'Media', 'State', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', ':', 'Media', 'disconnected', 'Connection-specific', 'DNS', 'Suffix', '.', ':', 'Wireless', 'LAN', 'adapter', 'Local', 'Area', 'Connection*', '10:', 'Media', 'State', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', ':', 'Media', 'disconnected', 'Connection-specific', 'DNS', 'Suffix', '.', ':', 'Ethernet', 'adapter', 'Bluetooth', 'Network', 'Connection:', 'Media', 'State', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', ':', 'Media', 'disconnected', 'Connection-specific', 'DNS', 'Suffix', '.', ':', 'Ethernet', 'adapter', 'vEthernet', '(Default', 'Switch):', 'Connection-specific', 'DNS', 'Suffix', '.', ':', 'Link-local', 'IPv6', 'Address', '.', '.', '.', '.', '.', ':', 'fe80::abb9:495e:f263:7876%23', 'IPv4', 'Address.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', ':', '172.30.240.1', 'Subnet', 'Mask', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', ':', '255.255.240.0', 'Default', 'Gateway', '.', '.', '.', '.', '.', '.', '.', '.', '.', ':']</msg>
+<arg>${wordList}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-01T20:09:08.011498" elapsed="0.000406"/>
+</kw>
+<kw name="Get Index From List" owner="Collections">
+<msg time="2026-09-01T20:09:08.012283" level="INFO">${index} = 25</msg>
+<var>${index}</var>
+<arg>${wordList}</arg>
+<arg>Subnet</arg>
+<doc>Returns the index of the first occurrence of the ``value`` on the list.</doc>
+<status status="PASS" start="2026-09-01T20:09:08.012103" elapsed="0.000278"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-09-01T20:09:08.015325" level="INFO">${index} = 24</msg>
+<var>${index}</var>
+<arg>${index}-1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-09-01T20:09:08.012535" elapsed="0.002928"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-09-01T20:09:08.015808" level="INFO">${IPAddress} = 10.2.0.2</msg>
+<var>${IPAddress}</var>
+<arg>${wordList}[${index}]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-09-01T20:09:08.015598" elapsed="0.000322"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-09-01T20:09:08.016427" level="INFO">10.2.0.2</msg>
+<arg>${IPAddress}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-09-01T20:09:08.016066" elapsed="0.000536"/>
+</kw>
+<status status="PASS" start="2026-09-01T20:09:07.967568" elapsed="0.049244"/>
+</test>
+<status status="PASS" start="2026-09-01T20:09:04.756057" elapsed="3.262961"/>
+</suite>
+<status status="PASS" start="2026-09-01T20:09:04.753718" elapsed="3.269813"/>
+</suite>
+<status status="PASS" start="2026-09-01T20:09:04.734853" elapsed="3.290619"/>
+</suite>
+<statistics>
+<total>
+<stat pass="14" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Software testing" id="s1" pass="14" fail="0" skip="0">Software testing</stat>
+<stat name="Robot Framework" id="s1-s1" pass="14" fail="0" skip="0">Software testing.Robot Framework</stat>
+<stat name="Demo" id="s1-s1-s1" pass="14" fail="0" skip="0">Software testing.Robot Framework.Demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
