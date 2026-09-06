@@ -10,7 +10,7 @@ Esimerkiksi tämän kolmio tehtävän palautukseen vaadittu 3 testiä osoittaa e
 Uskon että hyötysuhde, käytettävissä oleva aika, asiakkaan/käyttäjän tarve ja yleinen testaustarve ohjelmalle/koodille vaikuttavat kaikki asiaan.<br>
 Suoraa vastausta "kuinka monta testiä tarvitaa kattavuuteen" en voi antaa, enkä voi antaa edes suuntaa antavaa vastausta.<br>
 Riippuu hyvin pitkälti mitä ollaan testaamassa, kenelle ja mihin tarkoitukseen.<br>
-////////////////////////////////////////////////////////////////////////////<br>
+<br>
 <br>
 <h5>Nostoja / ajatuksia paperista.</h5><br>
 <br><br>
