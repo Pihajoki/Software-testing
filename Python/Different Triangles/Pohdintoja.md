@@ -14,12 +14,12 @@ Riippuu hyvin pitkälti mitä ollaan testaamassa, kenelle ja mihin tarkoitukseen
 <br>
 <h5>Nostoja / ajatuksia paperista.</h5><br>
 <br><br>
-Kurssin tehtävän hyväksyttävään suoritukseen testejä **3 kappaletta**:<br>
+Kurssin tehtävän hyväksyttävään suoritukseen testejä 3 kappaletta:<br>
 -epäsäännöllinen<br>
 -tasakylkinen<br>
 -tasasivuinen<br>
 <br><br>
-minimaaliseen testiin **4 kappaletta**:<br>
+minimaaliseen testiin 4 kappaletta:<br>
 -epäsäännöllinen<br>
 -tasakylkinen<br>
 -tasasivuinen<br>
