@@ -3,24 +3,37 @@ Library    OperatingSystem
 Library    Collections
 Library    String
 
-
-*** Test Cases ***
-# Lue tiedostosta muuttujaan
-# Tee tiedoston sisälöstä sanalista ${addresses}
-# Aseta haettu lista globaaliksi muuttujaksi
-Set global variable    ${addresses}
-
+*** Variables ***
+${path}=    Set Variable    C:\\Users\\jogis\\Documents\\GitHub\\Software testing\\Robot Framework\\Tehtävä 3 Robot Framework - Ping
+${addresses}=    Get File    ${path}/webpages.txt
+${count}=    Get Line Count    ${addresses}
 
 
 *** Test Cases ***
+# Lue tiedostosta muuttujaan, Tee tiedoston sisälöstä sanalista ${addresses}, Aseta haettu lista globaaliksi muuttujaksi
+Lue tiedostosta muuttujaan
+    ${path}=    Set Variable    C:\\Users\\jogis\\Documents\\GitHub\\Software testing\\Robot Framework\\Tehtävä 3 Robot Framework - Ping
+    ${addresses}=    Get File    ${path}/webpages.txt
+    Set Global Variable    ${addresses}
+
 # Luo tyhjä tiedosto
+Luo tyhjä tiedosto
+    ${path}=    Set Variable    C:\\Users\\jogis\\Documents\\GitHub\\Software testing\\Robot Framework\\Tehtävä 3 Robot Framework - Ping
+    Create File    ${path}/tyhja.txt
+    File Should Exist    ${path}/tyhja.txt
+    File Should Not Be Empty    ${path}/tyhja.txt
 
-#Selvitä kuinka monta ositetta ${addresses} listassa on ja tallenna se muuttujaaan ${count}
+# Selvitä kuinka monta ositetta ${addresses} listassa on ja tallenna se muuttujaaan ${count}
+Selvitä kuinka monta ositetta
+    Set Global Variable    ${count}
+
 
 # SIlmukka, joka käy listan läpi ja suorittaa pingin
-FOR    ${index}    IN RANGE    ${count}
-    ${output}=    Run And Return Rc And Output    ping ${addresses}[${index}]
-END
+Silmukka joka käy listan läpi ja suorittaa pingin
+    FOR    ${index}    IN RANGE    ${count}
+        ${output}=    Run And Return Rc And Output    ping ${addresses}[${index}]
+        Log    ${output}
+    END
 
 #Etsi tarvittavat tiedot outputista
 
