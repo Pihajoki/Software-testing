@@ -1,0 +1,26 @@
+1789054061833	geckodriver	INFO	Listening on 127.0.0.1:50471
+1789054064913	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50472" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jogis\\AppData\\Local\\Temp\\rust_mozprofileBzhLjq"
+Dynamically enable window occlusion 0
+1789054065117	Marionette	INFO	Marionette enabled
+1789054065170	Marionette	INFO	Listening on port 50523
+WebDriver BiDi listening on ws://127.0.0.1:50472
+Read port: 50523
+1789054065273	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[ERROR shell_windows::limited_access_features] Error generating feature token: NS_ERROR_FAILURE
+[ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: "Unspecified error" }
+[ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: "Unspecified error" }
+[ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: "Unspecified error" }
+console.error: "Experiment desktop-release-rollout-show-relay-to-all-browsers-next-sign-up-modal-cta has unknown featureId: email-autocomplete-relay"
+console.error: "Experiment visual-card-updates has unknown featureId: newtabRefinedCardsLayout"
+console.error: "Experiment enable-nimbus-unenrollment-synchronization has unknown featureId: nimbusStore"
+console.error: "Experiment private-window-visual-refresh-design-change-only has unknown featureId: feltPrivacy"
+JavaScript warning: https://eu.fw-cdn.com/12979228/932572.js, line 3: unreachable code after return statement
+JavaScript warning: https://eu.fw-cdn.com/12979228/932572.js, line 3: unreachable code after return statement
+console.error: "Experiment desktop-release-rollout-show-relay-to-all-browsers-next-sign-up-modal-cta has unknown featureId: email-autocomplete-relay"
+console.error: "Experiment visual-card-updates has unknown featureId: newtabRefinedCardsLayout"
+console.error: "Experiment enable-nimbus-unenrollment-synchronization has unknown featureId: nimbusStore"
+console.error: "Experiment private-window-visual-refresh-design-change-only has unknown featureId: feltPrivacy"
+1789055213600	webdriver::server	INFO	Shutting down
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.

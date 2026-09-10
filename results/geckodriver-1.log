@@ -1,0 +1,27 @@
+1789053553823	geckodriver	INFO	Listening on 127.0.0.1:65459
+1789053556889	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65460" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jogis\\AppData\\Local\\Temp\\rust_mozprofileVtleDV"
+Dynamically enable window occlusion 0
+1789053557106	Marionette	INFO	Marionette enabled
+1789053557163	Marionette	INFO	Listening on port 65510
+WebDriver BiDi listening on ws://127.0.0.1:65460
+Read port: 65510
+1789053557250	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[ERROR shell_windows::limited_access_features] Error generating feature token: NS_ERROR_FAILURE
+[ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: "Unspecified error" }
+[ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: "Unspecified error" }
+[ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: "Unspecified error" }
+console.error: "Experiment desktop-release-rollout-show-relay-to-all-browsers-next-sign-up-modal-cta has unknown featureId: email-autocomplete-relay"
+console.error: "Experiment visual-card-updates has unknown featureId: newtabRefinedCardsLayout"
+console.error: "Experiment enable-nimbus-unenrollment-synchronization has unknown featureId: nimbusStore"
+JavaScript warning: https://eu.fw-cdn.com/12979228/932572.js, line 3: unreachable code after return statement
+console.error: "Experiment private-window-visual-refresh-design-change-only has unknown featureId: feltPrivacy"
+JavaScript warning: https://www.googletagmanager.com/gtm.js?id=GTM-MTKJJ5, line 447: Script terminated by timeout at:
+ej/<@https://www.googletagmanager.com/gtm.js?id=GTM-MTKJJ5:447:828
+ej@https://www.googletagmanager.com/gtm.js?id=GTM-MTKJJ5:447:796
+tm@https://www.googletagmanager.com/gtm.js?id=GTM-MTKJJ5:490:409
+um</<@https://www.googletagmanager.com/gtm.js?id=GTM-MTKJJ5:491:14
+
+1789053573849	Marionette	INFO	Stopped listening on port 65510
+JavaScript error: resource://gre/modules/PrivateBrowsingUtils.sys.mjs, line 50: TypeError: can't access property "QueryInterface", aWindow.docShell is null
+Dynamically enable window occlusion 1
+1789053631666	webdriver::server	INFO	Shutting down
